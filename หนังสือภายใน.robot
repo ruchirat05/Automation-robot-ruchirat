@@ -15,7 +15,7 @@ Library    SeleniumLibrary
 ข้อมูลหนังสือส่ง
     #ลงวันที่
     กรอกชื่อเรื่อง
-    กรอกระบุเรียน    ผู้อำนวยการกองมาตรฐานการจัดเก็บภาษี
+    กรอกระบุเรียน    
     #ชื่อผู้ลงนาม   
     คลิกปุ่มออกเลขหนังสือ
     
@@ -43,10 +43,10 @@ Library    SeleniumLibrary
 กรอกชื่อเรื่อง
     Input Text    name=formc:subject1    การประชาสัมพันธ์การยื่นแบบแสดงรายการภาษีเงินได้บุคคลธรรมดา ภ.ง.ด.90, 91 ปีภาษี 2563
 กรอกระบุเรียน  
-    [Arguments]    ${receiverName}
-    Input Text    name=formc:receiverNameAuto1_input     ${receiverName}
+    #[Arguments]    ${receiverName}
+    Input Text    name=formc:receiverNameAuto1_input     ผู้อำนวยการกองมาตรฐานการจัดเก็บภาษี
     Wait Until Element Is Visible    id=formc:receiverNameAuto1_panel
-    Click Element    //*[@id="formc:receiverNameAuto1_panel"]/ul/li[contains(@data-item-label, '${receiverName}')]
+    Click Element    //*[@id="formc:receiverNameAuto1_panel"]/ul/li[contains(@data-item-label, 'ผู้อำนวยการกองมาตรฐานการจัดเก็บภาษี')]
  #ชื่อผู้ลงนาม   
 คลิกปุ่มออกเลขหนังสือ
     Click Element    formc:e_btnInsert
